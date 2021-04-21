@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.auditchecklist.model.AuditType;
 import com.auditchecklist.model.Questions;
 import com.auditchecklist.services.AuditTypeServices;
 import com.auditchecklist.services.QuestionsServices;
@@ -19,8 +20,8 @@ public class ChecklisttController {
 	
 
 	@GetMapping("/AuditCheckListQuestions/{type}")
-	public List<Questions> getQuestions(@PathVariable String type) {		
-		return auditService.getAuditByType(type).get(0).getQuestions();
+	public AuditType getQuestions(@PathVariable String type) {		
+		return auditService.getAuditByType(type).get(0);
 	}
 	
 }

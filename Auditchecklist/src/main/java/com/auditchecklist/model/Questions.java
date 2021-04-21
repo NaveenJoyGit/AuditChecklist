@@ -14,6 +14,7 @@ public class Questions {
 
 	private String question;
 
+
 	public Questions() {
 	}
 
@@ -22,6 +23,13 @@ public class Questions {
 		this.question = question;
 	}
 
+	public Long getId() {
+		return id;
+	}
+	
+	public void setId(Long id) {
+		this.id = id;
+	}
 	public String getQuestion() {
 		return question;
 	}
